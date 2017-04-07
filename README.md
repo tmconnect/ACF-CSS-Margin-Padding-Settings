@@ -67,7 +67,7 @@ This add-on can be treated as both a WP plugin and a theme include.
 **Include within theme**
 
 1.	Copy the 'acf-css_margin_padding' folder into your theme folder (can use sub folders). You can place the folder anywhere inside the 'wp-content' directory
-2.	Edit your functions.php file and add the code below (Make sure the path is correct to include the acf-date_time_picker.php file)
+2.	Edit your functions.php file and add the code below (Make sure the path is correct to include the acf-css_margin_padding.php file)
 
 ```php
 add_action('acf/register_fields', 'my_register_fields');
