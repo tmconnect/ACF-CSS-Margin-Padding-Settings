@@ -57,26 +57,9 @@ In your page template get the array with `get_field('YOUR_FIELD_NAME')` and grab
 
 ### Installation
 
-This add-on can be treated as both a WP plugin and a theme include.
-
-**Install as Plugin**
-
 1. Copy the 'acf-css_margin_padding' folder into your plugins folder
 2. Activate the plugin via the Plugins admin page
 
-**Include within theme**
-
-1.	Copy the 'acf-css_margin_padding' folder into your theme folder (can use sub folders). You can place the folder anywhere inside the 'wp-content' directory
-2.	Edit your functions.php file and add the code below (Make sure the path is correct to include the acf-css_margin_padding.php file)
-
-```php
-add_action('acf/register_fields', 'my_register_fields');
-
-function my_register_fields()
-{
-	include_once('acf-css_margin_padding/acf-css_margin_padding.php');
-}
-```
 
 **This plugin needs the installation/activation of Advanced Custom Fields V5**
 
