@@ -70,7 +70,7 @@
 			"border-style": $(this).val(),
 		})
 	});
-
+/*
 	$('.acf-css-border-color-field').wpColorPicker({
 		hide: true,
 		change: function(event, ui) {
@@ -109,7 +109,7 @@
 	$('.acf-css-text-color-settings .wp-picker-clear').on('click', function() {
 		$(".acf-css-center-caption p").css( 'color', 'inherit');
 	});
-
+*/
 	$('.select2-container.border-style').select2({
 		data:[
 			{id:'none',text:acf._e('css_margin_padding', 'none')},
