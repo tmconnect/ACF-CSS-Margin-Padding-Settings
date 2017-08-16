@@ -73,9 +73,10 @@ class acf_field_css_margin_padding extends acf_field {
 		 
 		        // Add the color picker css file
 		    wp_enqueue_style( 'wp-color-picker' );
-		 
+		 		
 		        // Include our custom jQuery file with WordPress Color Picker dependency
 		        wp_enqueue_script( 'custom-script-handle', plugins_url( 'js/input.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+				wp_enqueue_script( 'wp-color-picker-alpha', plugins_url( 'js/wp-color-picker-alpha.min.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
 		    }
 		}
 
@@ -358,20 +359,22 @@ class acf_field_css_margin_padding extends acf_field {
 				<div class="acf-css-border-settings acf-css-back-color-settings">
 					<label for= "<?php echo $fieldname; ?>_background-color"><?php _e('Background Color', 'acf-css_margin_padding'); ?></label>
 					<input
-						class = "acf-css-back-color-field"
+						class = "acf-css-back-color-field color-picker"
 						name = "<?php echo $field['name']; ?>[background-color]"
 						id = "<?php echo $fieldname; ?>_background-color"
 						type = "text"
+						data-alpha="true"
 						value = "<?php echo $field_value['background-color']; ?>"
 						data-fieldname = "<?php echo $field['name']; ?>"
 					></div>
 					<div class="acf-css-border-settings acf-css-border-color-settings">
 					<label for= "<?php echo $fieldname; ?>_border-color"><?php _e('Border Color', 'acf-css_margin_padding'); ?></label>
 					<input
-						class = "acf-css-border-color-field"
+						class = "acf-css-border-color-field color-picker"
 						name = "<?php echo $field['name']; ?>[border-color]"
 						id = "<?php echo $fieldname; ?>_border-color"
 						type = "text"
+						data-alpha="true"
 						value= "<?php echo $field_value['border-color']; ?>"
 						data-fieldname = "<?php echo $field['name']; ?>"
 					></div>
@@ -379,10 +382,11 @@ class acf_field_css_margin_padding extends acf_field {
 					<div class="acf-css-border-settings acf-css-text-color-settings">
 					<label for= "<?php echo $fieldname; ?>_color"><?php _e('Text Color', 'acf-css_margin_padding'); ?></label>
 					<input
-						class = "acf-css-text-color-field"
+						class = "acf-css-text-color-field color-picker"
 						name = "<?php echo $field['name']; ?>[color]"
 						id = "<?php echo $fieldname; ?>_color"
 						type = "text"
+						data-alpha="true"
 						value= "<?php echo $field_value['color']; ?>"
 						data-fieldname = "<?php echo $field['name']; ?>"
 					></div>
